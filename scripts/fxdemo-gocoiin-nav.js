@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded',async function(){
    let root=doc.querySelector('main');
    if(!root){root=doc.body;root?.querySelectorAll('header,footer,nav,script,style').forEach(n=>n.remove());}
    if(!root)return null;
-   const clean=s=>(s||'').replace(/FXCentrum24|FX CENTRUM24|GO COIIN|FOREX/gi,'FXDemo').replace(/\s+/g,' ').trim();
+   const clean=s=>(s||'').replace(/FXCentrum24|FX CENTRUM24|GO COIIN/gi,'FXDemo').replace(/\s+/g,' ').trim();
    const h1=root.querySelector('h1'),title=clean(h1?.textContent||doc.title);
    let intro=''; if(h1){let n=h1.nextElementSibling;while(n&&!intro){if(n.matches('p'))intro=clean(n.textContent);else if(n.querySelector?.('p'))intro=clean(n.querySelector('p').textContent);n=n.nextElementSibling;}}
    const pairs=[]; [...root.querySelectorAll('h2,h3')].forEach(h=>{const name=clean(h.textContent);if(!name||name.length<3||/^on this page$/i.test(name)||pairs.includes(name))return;let d='',n=h.nextElementSibling,k=0;while(n&&k++<10&&!n.matches('h2,h3')){if(n.matches('p,li')){const t=clean(n.textContent);if(t.length>18)d+=(d?' ':'')+t;}else if(n.querySelectorAll){const nested=[...n.querySelectorAll('p,li')].map(x=>clean(x.textContent)).filter(t=>t.length>18);if(nested.length)d+=(d?' ':'')+nested.slice(0,2).join(' ');}n=n.nextElementSibling;}if(d){pairs.push(name,d.slice(0,500));}});
