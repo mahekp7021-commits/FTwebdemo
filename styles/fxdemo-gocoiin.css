@@ -301,3 +301,41 @@
 .goc-page-section{max-width:1200px;margin:0 auto;padding:clamp(44px,6vw,76px) clamp(20px,4vw,48px)}.goc-section-heading{max-width:720px;margin-bottom:30px}.goc-section-heading h2{font-size:clamp(27px,3.3vw,40px);line-height:1.16;color:#152b47;letter-spacing:-.025em;margin:0 0 12px}.goc-section-heading p{color:#66758a;line-height:1.7;margin:0}.goc-info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}.goc-info-card{position:relative;padding:27px 25px;border:1px solid #e1e8f0;border-radius:15px;background:#fff;box-shadow:0 8px 28px #193b5c08;min-height:205px}.goc-info-number{display:inline-block;color:#f47763;font-size:12px;letter-spacing:.12em;font-weight:900;margin-bottom:22px}.goc-info-card h2{font-size:20px;line-height:1.3;color:#1d3553;margin:0 0 12px}.goc-info-card p{font-size:15px;line-height:1.75;color:#657388;margin:0}.goc-soft-section{max-width:none;background:#f6f9fc}.goc-soft-section>.goc-section-heading,.goc-soft-section>.goc-related-grid{max-width:1104px;margin-left:auto;margin-right:auto}.goc-related-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.goc-related-link{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:18px 17px;border:1px solid #e0e8f1;border-radius:10px;background:#fff;color:#23466e;text-decoration:none;font-weight:700;transition:border-color .2s,transform .2s}.goc-related-link:hover{border-color:#f47763;transform:translateY(-2px)}.goc-related-link b{color:#f47763;font-size:19px}.goc-risk-note{max-width:1104px;margin:0 auto 50px;padding:22px 25px;border-left:4px solid #f47763;border-radius:0 10px 10px 0;background:#fff7f4;color:#5d6571}.goc-risk-note strong{color:#263b55}.goc-risk-note p{margin:8px 0 0;line-height:1.75;font-size:13px}
 @media(max-width:850px){.goc-page-hero{grid-template-columns:1fr;min-height:0}.goc-page-hero-art{min-height:250px}.goc-info-grid{grid-template-columns:1fr 1fr}.goc-related-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:540px){.goc-page-hero{padding:38px 20px;border-radius:0 0 18px 18px}.goc-page-hero h1{font-size:35px}.goc-page-hero-art{min-height:220px}.goc-info-grid,.goc-related-grid{grid-template-columns:1fr}.goc-info-card{min-height:0}.goc-page-section{padding:42px 20px}.goc-risk-note{margin:0 20px 35px;padding:18px}}
+
+
+/* Account-family pages built from supplied account HTML, styled to match FXDemo's white/navy/green design */
+.fx-account-hero{max-width:1120px;padding-bottom:34px}
+.fx-account-hero-actions{display:flex;flex-wrap:wrap;gap:0;margin-top:22px}
+.fx-account-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;margin-top:34px;border:1px solid #dfe6ec;background:#f7f9fb}
+.fx-account-summary>div{padding:20px 22px;border-right:1px solid #dfe6ec;display:flex;flex-direction:column;gap:8px}
+.fx-account-summary>div:last-child{border-right:0}
+.fx-account-summary span,.fx-account-funding>span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:#64748b;font-weight:700}
+.fx-account-summary strong{font-size:17px;color:#00214a}
+.fx-account-pricing>p{max-width:1000px}
+.fx-account-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:28px}
+.fx-account-card{--account-accent:#00a96b;position:relative;display:flex;flex-direction:column;overflow:hidden;border:1px solid #dce4eb;background:#fff;box-shadow:0 10px 32px rgba(0,33,74,.07);transition:transform .2s,border-color .2s,box-shadow .2s}
+.fx-account-card:hover{transform:translateY(-3px);border-color:var(--account-accent);box-shadow:0 16px 36px rgba(0,33,74,.11)}
+.fx-account-card:before{content:"";height:5px;width:100%;background:var(--account-accent)}
+.fx-account-card.fx-tier-silver{--account-accent:#8797a8}
+.fx-account-card.fx-tier-bronze{--account-accent:#b8794b}
+.fx-account-card.fx-tier-gold{--account-accent:#b68b16}
+.fx-account-card-head{padding:26px 26px 20px;border-bottom:1px solid #e8edf2}
+.fx-account-label{display:inline-block;color:var(--account-accent);font-size:11px;font-weight:800;letter-spacing:.12em}
+.fx-account-card-head h3{margin:13px 0 5px;font-size:28px;line-height:1.2;letter-spacing:-.02em;color:#00214a}
+.fx-account-card-head p{margin:0;color:#64748b;font-size:15px}
+.fx-account-funding{padding:20px 26px;background:#f7f9fb;display:flex;align-items:center;justify-content:space-between;gap:16px;border-bottom:1px solid #e8edf2}
+.fx-account-funding strong{font-size:32px;line-height:1;color:#00214a;letter-spacing:-.04em}
+.fx-account-features{list-style:none;padding:8px 26px 12px;margin:0;flex:1}
+.fx-account-features li{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid #edf1f4;color:#334155;font-size:15px;line-height:1.45}
+.fx-account-features li:last-child{border-bottom:0}
+.fx-account-check{display:inline-grid;place-items:center;flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:#e5f8ef;color:#00875a;font-size:12px;font-weight:900}
+.fx-account-card-action{padding:8px 26px 26px}
+.fx-account-card-action .fx-page-cta{width:100%;justify-content:center;text-align:center;margin:0;box-sizing:border-box}
+.fx-account-footnote{font-size:13px!important;color:#64748b!important;line-height:1.7!important;margin-top:20px}
+.fx-account-info-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.fx-account-info-grid .fx-page-card{min-height:0;background:#f9fbfc}
+.fx-account-info-grid .fx-page-card h3{font-size:19px}
+.fx-account-cta{display:flex;align-items:center;justify-content:space-between;gap:30px;background:#f7f9fb;padding:30px;margin-top:12px;margin-bottom:50px;border:1px solid #e5eaf0}
+.fx-account-cta h2{margin-bottom:10px}
+.fx-account-cta p{max-width:740px;margin-bottom:0}
+@media(max-width:760px){.fx-account-grid,.fx-account-info-grid{grid-template-columns:1fr}.fx-account-summary{grid-template-columns:1fr}.fx-account-summary>div{border-right:0;border-bottom:1px solid #dfe6ec}.fx-account-summary>div:last-child{border-bottom:0}.fx-account-cta{display:block;padding:22px}.fx-account-cta .fx-account-hero-actions{margin-top:10px}.fx-account-card-head,.fx-account-funding{padding-left:20px;padding-right:20px}.fx-account-features{padding-left:20px;padding-right:20px}.fx-account-card-action{padding-left:20px;padding-right:20px}}
