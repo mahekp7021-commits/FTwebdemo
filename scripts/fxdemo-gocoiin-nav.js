@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded',async function(){
    let intro=''; if(h1){let n=h1.nextElementSibling;while(n&&!intro){if(n.matches('p'))intro=clean(n.textContent);else if(n.querySelector?.('p'))intro=clean(n.querySelector('p').textContent);n=n.nextElementSibling;}}
    const pairs=[]; [...root.querySelectorAll('h2,h3')].forEach(h=>{const name=clean(h.textContent);if(!name||name.length<3||/^on this page$/i.test(name)||pairs.includes(name))return;let d='',n=h.nextElementSibling,k=0;while(n&&k++<10&&!n.matches('h2,h3')){if(n.matches('p,li')){const t=clean(n.textContent);if(t.length>18)d+=(d?' ':'')+t;}else if(n.querySelectorAll){const nested=[...n.querySelectorAll('p,li')].map(x=>clean(x.textContent)).filter(t=>t.length>18);if(nested.length)d+=(d?' ':'')+nested.slice(0,2).join(' ');}n=n.nextElementSibling;}if(d){pairs.push(name,d.slice(0,500));}});
    if(pairs.length<4){const ps=[...root.querySelectorAll('p')].map(p=>clean(p.textContent)).filter(p=>p.length>55&&p!==intro);while(pairs.length<6&&ps.length){pairs.push('More information',ps.shift());}}
-   return [title,intro||'Review the information and applicable terms before taking action.',pairs.slice(0,8)];
+   return [title,intro||'Review the information and applicable terms before taking action.',pairs.slice(0,20)];
   }catch(e){return null;}
  }
  if(sourcePaths[slug]&&!['how-open-account','apply','withdrawal','account-comparison'].includes(slug)){entry=await sourceEntry(sourcePaths[slug])||entry;}
