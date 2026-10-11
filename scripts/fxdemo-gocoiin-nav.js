@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded',function(){
     "Learning":[["Education","education.html"],["Technical analysis","technical-analysis.html"],["Margin","calculating-margin.html"],["Profit & loss","how-calculate-profit-loss.html"]],
     "Support":[["Contact","contact.html"],["Deposits","deposit.html"],["Withdrawals","withdrawal.html"],["Legal information","legal.html"]]
    };
-   const cards=sections.map((s,i)=>'<article class="goc-info-card"><span class="goc-info-number">0'+(i+1)+'</span><h2>'+s[0]+'</h2><p>'+s[1]+'</p></article>').join('');
+   const sectionPairs=[]; for(let si=0;si<sections.length;si+=2){sectionPairs.push([sections[si],sections[si+1]||'Review the current official terms and product information before taking action.']);} const cards=sectionPairs.map((s,i)=>'<article class="goc-info-card"><span class="goc-info-number">'+String(i+1).padStart(2,'0')+'</span><h2>'+s[0]+'</h2><p>'+s[1]+'</p></article>').join('');
    const links=[...related.Markets,...related.Accounts,...related.Platforms,...related.Learning,...related.Support];
    const unique=links.filter((v,i,a)=>a.findIndex(x=>x[1]===v[1])===i).slice(0,8);
    main.className=(main.className+' goc-page').trim();
