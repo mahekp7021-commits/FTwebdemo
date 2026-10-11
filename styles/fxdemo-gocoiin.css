@@ -61,3 +61,29 @@
 .fxdemo-footer-bottom span{white-space:nowrap;color:#c8d7e8;font-size:12px}
 @media(max-width:1000px){.fxdemo-footer-links{grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}.fxdemo-footer-top{align-items:flex-start;flex-direction:column;gap:14px}}
 @media(max-width:600px){.fxdemo-site-footer{padding:32px 20px 20px}.fxdemo-footer-links{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px 18px;padding:24px 0}.fxdemo-footer-bottom{flex-direction:column;gap:10px}.fxdemo-footer-bottom span{white-space:normal}}
+
+/* Strong contrast fix for legacy dark-blue feature sections */
+.bg-navy-secondary-oanda-style .block-content .rich-text h1,
+.bg-navy-secondary-oanda-style .block-content .rich-text h2,
+.bg-navy-secondary-oanda-style .block-content .rich-text h3,
+.bg-navy-secondary-oanda-style .block-content .rich-text h4,
+.bg-navy-secondary-oanda-style .block-content .rich-text p,
+.bg-navy-secondary-oanda-style .block-content .rich-text li,
+.bg-navy-secondary-oanda-style .block-content .rich-text span,
+.bg-navy-secondary-oanda-style .block-content .rich-text strong,
+.bg-navy-secondary-oanda-style .block-content .block-text,
+.bg-navy-secondary-oanda-style .block-content .block-text .rich-text,
+.bg-navy-secondary-oanda-style .block-content .block-text .rich-text *,
+.feature-block.bg-navy-secondary-oanda-style h1,
+.feature-block.bg-navy-secondary-oanda-style h2,
+.feature-block.bg-navy-secondary-oanda-style h3,
+.feature-block.bg-navy-secondary-oanda-style p,
+.feature-block.bg-navy-secondary-oanda-style .rich-text *,
+.block-content[style*="--heading-colour: #FFFFFF"] .rich-text h1,
+.block-content[style*="--heading-colour: #FFFFFF"] .rich-text h2,
+.block-content[style*="--heading-colour: #FFFFFF"] .rich-text h3,
+.block-content[style*="--heading-colour: #FFFFFF"] .rich-text p {color:#fff!important}
+.bg-navy-secondary-oanda-style .block-content .rich-text a,
+.bg-navy-secondary-oanda-style .block-content .rich-text a * {color:#b7f000!important}
+.bg-navy-secondary-oanda-style .block-content .bullet-list-item,
+.bg-navy-secondary-oanda-style .block-content .bullet-list-item span {color:#fff!important}
