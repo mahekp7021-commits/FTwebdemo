@@ -7,8 +7,16 @@ document.addEventListener('DOMContentLoaded',function(){
   'Platforms':'Find a trading workspace for your preferred device and workflow.',
   'Accounts':'Compare account information and review terms before applying.',
   'Tools':'Use market information and learning resources to support your research.',
-  'Company':'Learn more about FXDemo and how to get in touch.'
+  'Company':'Learn more about FXDemo and how to get in touch.',
+  'Payment':'Review deposit methods and withdrawal information.'
  };
+ const pagePrefix=window.location.pathname.includes('/pages/')?'':'./pages/';
+ const partnership=menu.querySelector('.fx-gocoiin-direct');
+ if(partnership&&!menu.querySelector('[data-fx-payment-menu]')){
+  const payment=document.createElement('div');payment.className='fx-gocoiin-item';payment.setAttribute('data-fx-payment-menu','true');
+  payment.innerHTML='<button type="button" class="fx-gocoiin-trigger" aria-expanded="false">Payment <span>⌄</span></button><div class="fx-gocoiin-dropdown"><a href="'+pagePrefix+'deposit.html"><strong>Deposit</strong><small>Bank transfer, QR and UPI details</small></a><a href="'+pagePrefix+'withdrawal.html"><strong>Withdrawal</strong><small>Submit and track a withdrawal request</small></a></div>';
+  menu.insertBefore(payment,partnership);
+ }
  const closeAll=()=>menu.querySelectorAll('.fx-gocoiin-item').forEach(item=>{item.classList.remove('is-open');item.querySelector('.fx-gocoiin-trigger')?.setAttribute('aria-expanded','false')});
  const prepare=btn=>{
   const item=btn.closest('.fx-gocoiin-item'),dropdown=item.querySelector('.fx-gocoiin-dropdown');
