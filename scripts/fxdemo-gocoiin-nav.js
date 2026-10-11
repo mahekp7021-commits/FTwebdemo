@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded',async function(){
    return [title,intro||'Review the information and applicable terms before taking action.',pairs.slice(0,20)];
   }catch(e){return null;}
  }
- if(sourcePaths[slug]&&!['how-open-account','apply','withdrawal','account-comparison'].includes(slug)){entry=await sourceEntry(sourcePaths[slug])||entry;}
+ if(sourcePaths[slug]&&!['how-open-account','apply','withdrawal','account-comparison','standard-account','premium-account','professional-account'].includes(slug)){entry=await sourceEntry(sourcePaths[slug])||entry;}
 
  if(entry){
   const main=document.querySelector('main');
