@@ -87,3 +87,9 @@
 .bg-navy-secondary-oanda-style .block-content .rich-text a * {color:#b7f000!important}
 .bg-navy-secondary-oanda-style .block-content .bullet-list-item,
 .bg-navy-secondary-oanda-style .block-content .bullet-list-item span {color:#fff!important}
+
+/* FXDemo text brand used on all inner pages */
+.fx-gocoiin-logo.fxdemo-text-logo{display:inline-flex;align-items:center;gap:8px;text-decoration:none;white-space:nowrap;min-width:max-content}
+.fx-gocoiin-logo.fxdemo-text-logo .fxdemo-brand-mark{display:inline-flex;align-items:center;justify-content:center;width:31px;height:31px;border-radius:8px;background:#b7f000;color:#052247;font-size:12px;font-weight:900;letter-spacing:-.5px}
+.fx-gocoiin-logo.fxdemo-text-logo .fxdemo-brand-word{font-size:25px;line-height:1;font-weight:850;letter-spacing:-1.2px;color:#062449}
+.fx-gocoiin-logo.fxdemo-text-logo:hover{opacity:.88}
