@@ -1,0 +1,7 @@
+(function(s){
+s.data["1371_288"]=false;
+s.data["1371_239"]=false;
+for(var i=0;i<s.listeners.length;i++){
+s.listeners[i]("1371_288","1371_239");
+}
+})(_st.segmenting);

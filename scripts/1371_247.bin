@@ -1,0 +1,6 @@
+(function(s){
+s.data["1371_247"]={};
+for(var i=0;i<s.listeners.length;i++){
+s.listeners[i]("1371_247");
+}
+})(_st.segmenting);
