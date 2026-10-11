@@ -339,3 +339,61 @@
 .fx-account-cta h2{margin-bottom:10px}
 .fx-account-cta p{max-width:740px;margin-bottom:0}
 @media(max-width:760px){.fx-account-grid,.fx-account-info-grid{grid-template-columns:1fr}.fx-account-summary{grid-template-columns:1fr}.fx-account-summary>div{border-right:0;border-bottom:1px solid #dfe6ec}.fx-account-summary>div:last-child{border-bottom:0}.fx-account-cta{display:block;padding:22px}.fx-account-cta .fx-account-hero-actions{margin-top:10px}.fx-account-card-head,.fx-account-funding{padding-left:20px;padding-right:20px}.fx-account-features{padding-left:20px;padding-right:20px}.fx-account-card-action{padding-left:20px;padding-right:20px}}
+
+/* Account family pages: faithful structure from supplied account HTML, styled in FXDemo's clean blue/white/coral visual system */
+.goc-account-family{background:#edf6fb;color:#183650;font-family:inherit;overflow:hidden}
+.goc-account-family *{box-sizing:border-box}
+.goc-account-family h1,.goc-account-family h2,.goc-account-family h3,.goc-account-family p{margin-top:0}
+.goc-account-family a{text-decoration:none}
+.goc-account-family .goc-eyebrow{display:inline-block;color:#049fe9;font-size:11px;font-weight:850;letter-spacing:.16em;text-transform:uppercase;margin-bottom:12px}
+.goc-family-hero{padding:clamp(38px,6vw,68px) 4.2%;background:radial-gradient(circle at 78% 8%,#d4efff 0,transparent 35%),linear-gradient(120deg,#f8fbfe,#e8f5fc);border-bottom:1px solid #d7e7f2}
+.goc-family-hero-inner{max-width:1420px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:48px;align-items:center}
+.goc-family-copy h1{font-size:clamp(40px,5vw,68px);line-height:.99;letter-spacing:-.055em;color:#142d46;margin:8px 0 18px;font-weight:850;max-width:760px}
+.goc-family-copy h1 span,.goc-family-section-head h2 span{color:#079fe9}
+.goc-family-copy>p{max-width:740px;font-size:16px;line-height:1.75;color:#647f98;margin-bottom:0}
+.goc-account-family .goc-hero-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:24px}
+.goc-account-family .goc-primary,.goc-account-family .goc-secondary{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:0 17px;border-radius:7px;font-size:12px;font-weight:850}
+.goc-account-family .goc-primary{background:#ff3658;border:1px solid #ff3658;color:#fff!important;box-shadow:0 8px 20px #ff36582b}
+.goc-account-family .goc-primary:hover,.goc-family-plan-cta:hover{background:#e9274b;transform:translateY(-1px)}
+.goc-account-family .goc-secondary{background:#fff;border:1px solid #c5dbea;color:#1b3851!important}
+.goc-family-summary{padding:25px 27px;border:1px solid #d5e6f2;border-radius:17px;background:#ffffffdc;box-shadow:0 18px 40px #21486713}
+.goc-family-summary h2{font-size:17px;letter-spacing:-.02em;color:#203d58;margin:0 0 9px}
+.goc-family-summary>div{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;padding:15px 0;border-bottom:1px solid #e8f0f6;font-size:12px}
+.goc-family-summary>div:last-child{border-bottom:0;padding-bottom:2px}
+.goc-family-summary span{color:#7893aa}
+.goc-family-summary strong{color:#203d58;text-align:right}
+.goc-family-pricing{max-width:1520px;margin:0 auto;padding:42px 4.2% 48px}
+.goc-family-section-head{max-width:900px;margin-bottom:26px}
+.goc-family-section-head h2{font-size:clamp(31px,4vw,46px);line-height:1.08;letter-spacing:-.045em;color:#142d46;margin:0 0 12px}
+.goc-family-section-head h2 span{text-transform:lowercase}
+.goc-family-section-head>p{font-size:13px;line-height:1.75;color:#6b8599;max-width:900px;margin:0}
+.goc-family-plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.goc-family-plan{position:relative;display:flex;flex-direction:column;overflow:hidden;border:1px solid #d4e5f1;border-radius:17px;background:linear-gradient(145deg,#fff,#f6fbfe);box-shadow:0 12px 30px #21476210;min-width:0}
+.goc-family-plan header{padding:22px 22px 18px;border-bottom:1px solid #deebf4}
+.goc-family-chip{display:inline-flex;align-items:center;gap:6px;border:1px solid #d0e7f4;background:#eff9ff;color:#0799e0;border-radius:20px;padding:6px 10px;font-size:9px;font-weight:850;letter-spacing:.06em;text-transform:uppercase}
+.goc-family-chip:before{content:"";width:6px;height:6px;border-radius:50%;background:#079fe9}
+.goc-family-plan header h3{font-size:20px;line-height:1.25;margin:12px 0 4px;color:#1d405c;letter-spacing:-.025em}
+.goc-family-plan header p{font-size:11px;color:#748ba0;margin:0}
+.goc-family-funding{padding:17px 22px;display:flex;align-items:baseline;gap:9px;border-bottom:1px solid #deebf4;color:#1d405c}
+.goc-family-funding strong{font-size:26px;line-height:1;font-weight:850;letter-spacing:-.04em;color:#1d405c}
+.goc-family-funding span{font-size:8px;color:#8299aa;font-weight:850;letter-spacing:.08em}
+.goc-family-features{list-style:none;padding:0 22px;margin:0;flex:1}
+.goc-family-features li{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid #e7eff5;color:#718ba0;font-size:11px;line-height:1.5}
+.goc-family-features li:before{content:"✓";display:inline-grid;place-items:center;flex:0 0 15px;width:15px;height:15px;border-radius:50%;background:#e4fbf6;color:#00b894;font-size:9px;font-weight:900}
+.goc-family-plan-cta{display:flex;align-items:center;justify-content:center;gap:8px;min-height:42px;margin:17px 15px 15px;padding:0 10px;border-radius:6px;background:#ff3658;color:#fff;font-size:11px;font-weight:850;text-align:center;box-shadow:0 8px 18px #ff36582b;transition:transform .2s,background .2s}
+.goc-family-footnote{font-size:10px;line-height:1.7;color:#7b93a7;text-align:center;margin:15px auto 0;max-width:1000px}
+.goc-family-benefits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;padding:0 4.2% 42px;max-width:1520px;margin:0 auto}
+.goc-family-benefits>div{padding:19px 20px;border-radius:13px;background:#ffffffcc;border:1px solid #dceaf3}
+.goc-family-benefits h3{font-size:13px;color:#274a66;margin:0 0 8px;letter-spacing:-.015em}
+.goc-family-benefits p{font-size:10px;line-height:1.65;color:#718ba2;margin:0}
+.goc-family-next{padding:0 4.2% 46px;max-width:1520px;margin:0 auto}
+.goc-family-next-box{padding:34px 28px;border-radius:17px;border:1px solid #1b6385;background:linear-gradient(110deg,#073b5c,#0a2d4a);box-shadow:0 15px 30px #123f5b20}
+.goc-family-next-box .goc-eyebrow{color:#bbdef0}
+.goc-family-next-box h2{color:#fff;font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.045em;margin:0 0 12px}
+.goc-family-next-box>p{font-size:12px;line-height:1.7;color:#d3e6f3;margin:0}
+.goc-family-next-box .goc-secondary{margin-left:0}
+.goc-family-risk{padding:19px 4.2%;background:#e9f3f8;border-top:1px solid #d7e7f2}
+.goc-family-risk p{max-width:1420px;margin:0 auto;color:#627e93;font-size:10px;line-height:1.7}
+.goc-family-risk strong{color:#375871}
+@media(max-width:850px){.goc-family-hero-inner{grid-template-columns:1fr;gap:28px}.goc-family-summary{max-width:none}.goc-family-benefits{grid-template-columns:1fr 1fr}.goc-family-copy h1{font-size:clamp(40px,8vw,60px)}}
+@media(max-width:600px){.goc-family-hero{padding:36px 18px}.goc-family-pricing{padding:34px 16px}.goc-family-plan-grid,.goc-family-benefits{grid-template-columns:1fr}.goc-family-plan header{padding:19px 18px 16px}.goc-family-funding{padding:16px 18px}.goc-family-features{padding:0 18px}.goc-family-benefits{padding:0 16px 30px}.goc-family-next{padding:0 16px 32px}.goc-family-next-box{padding:25px 20px}.goc-family-risk{padding:17px 18px}.goc-family-summary{padding:20px}.goc-family-summary>div{gap:12px}}
