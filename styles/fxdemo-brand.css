@@ -1,0 +1,42 @@
+/* FXDemo brand system — light, premium, lime-accented trading UI */
+:root {
+  --fxdemo-ink: #102033;
+  --fxdemo-navy: #102033;
+  --fxdemo-lime: #B7F000;
+  --fxdemo-lime-hover: #A4D900;
+  --fxdemo-muted: #667487;
+  --fxdemo-border: #E1E7ED;
+  --fxdemo-surface: #FFFFFF;
+  --fxdemo-soft: #F5F8FA;
+}
+html, body { background: #fff !important; color: var(--fxdemo-ink); }
+body { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+h1, h2, h3, h4, .heading { color: var(--fxdemo-ink) !important; }
+a { text-underline-offset: 3px; }
+a:hover { color: #6E9900; }
+button, [role="button"], .button, a[class*="button"], a[class*="cta"], button[class*="cta"] {
+  transition: background-color .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+}
+button:hover, [role="button"]:hover, .button:hover, a[class*="button"]:hover, a[class*="cta"]:hover {
+  transform: translateY(-1px);
+}
+button[class*="primary"], a[class*="primary"], .btn-primary, [class*="cta"] button, [class*="cta"] a {
+  background-color: var(--fxdemo-lime) !important;
+  border-color: var(--fxdemo-lime) !important;
+  color: #102033 !important;
+  font-weight: 700 !important;
+}
+button[class*="primary"]:hover, a[class*="primary"]:hover, .btn-primary:hover {
+  background-color: var(--fxdemo-lime-hover) !important;
+  border-color: var(--fxdemo-lime-hover) !important;
+}
+#top-bar-desktop, .flat-nav-bar, header, [class*="navbar"], [class*="nav-bar"] {
+  border-color: var(--fxdemo-border);
+}
+.flat-nav-bar .selected .menu-option-button,
+.flat-nav-bar .menu-option-button:hover { color: var(--fxdemo-ink) !important; }
+::selection { background: #DFFF8A; color: #102033; }
+:focus-visible { outline: 3px solid #B7F000 !important; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
