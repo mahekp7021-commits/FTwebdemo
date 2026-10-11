@@ -1,0 +1,25 @@
+/* Surgical correction: align the existing hero artwork with the top of the hero row. */
+@media (min-width: 1024px) {
+  .hero-banner .image-wrap {
+    align-self: start !important;
+    min-height: 0 !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  .hero-banner .image-wrap picture {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+  .hero-banner .image-wrap img.hbh-image {
+    display: block !important;
+    position: static !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 620px !important;
+    object-fit: contain !important;
+    object-position: top center !important;
+  }
+}
