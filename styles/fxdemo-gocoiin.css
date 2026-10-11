@@ -1,3 +1,10 @@
+@import url("./heading_definitions.3e644fe98c1b.css");
+@import url("./tailwind.58da5fe9ad58.css");
+@import url("./colour-snippets.css");
+@import url("./flat_nav.6bc53f8ccba2.css");
+@import url("./footer.2dc5f9be6bba.css");
+@import url("./oanda.min.55945dec6a90.css");
+@import url("./common_themes.5b6c76c51dba.css");
 /* FXDemo GO COIIN navigation and OANDA-inspired page system */
 .fx-gocoiin-header{width:100%;border-bottom:1px solid #e5e7eb;font-family:inherit;color:#111827;background:#fff}
 .fx-gocoiin-header-inner{max-width:1600px;min-height:88px;margin:auto;padding:0 22px;display:flex;align-items:center;gap:18px}
