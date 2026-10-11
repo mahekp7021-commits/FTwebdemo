@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded',function(){
+document.addEventListener('DOMContentLoaded',async function(){
  const menu=document.getElementById('fxGocoiinMenu'),toggle=document.querySelector('.fx-gocoiin-toggle'),header=document.querySelector('.fx-gocoiin-header');
  if(!menu||!header)return;
  const descriptions={
@@ -93,7 +93,26 @@ document.addEventListener('DOMContentLoaded',function(){
   "webtrader": ["WebTrader","Review the common capabilities of a browser-based trading platform.",["Access through a browser","Where supported, WebTrader can provide market monitoring, charts and order management without a full desktop install.","Feature and browser compatibility","Tools, order types and market data depend on the platform and the broker's configuration.","Protect your session","Use the verified platform URL, sign out on shared devices and never share login codes."]]
  };
  const slug=window.location.pathname.split('/').pop().replace(/\.html?$/i,'');
- const entry=pageContent[slug];
+ let entry=pageContent[slug];
+ const sourcePaths={"a":"company/about.html","about":"company/about.html","benefits":"company/benefits.html","calculating-margin":"trading/trading-conditions.html","cfds":"markets/shares-cfds.html","commodities":"markets/commodities.html","contact":"company/contact.html","corporate-actions":"legal/client-agreement.html","cryptocurrencies":"markets/cryptocurrency.html","depth-market":"markets/forex.html","economic-calendar":"tools/economic-calendar.html","education":"trading/how-to-start.html","financing-costs":"trading/trading-conditions.html","fxtrade-app":"trading/platforms.html","holiday-trading-hours":"trading/trading-conditions.html","hours-of-operation":"trading/trading-conditions.html","how-calculate-profit-loss":"trading/trading-conditions.html","indices":"markets/indices.html","instruments":"markets/forex.html","introducing-broker":"partnership/index.html","legal":"legal/terms-and-conditions.html","metals":"markets/commodities.html","metatrader-4":"platforms/metatrader-4.html","metatrader-5":"platforms/metatrader-5.html","mt5-premium-indicators":"platforms/metatrader-5.html","offers":"company/benefits.html","orderbook":"markets/forex.html","our-charges":"trading/trading-conditions.html","page":"company/about.html","platforms":"trading/platforms.html","premium-account":"accounts/premium.html","premium-trader":"accounts/premium.html","professional-account":"accounts/professional.html","refer-a-friend":"partnership/index.html","share-cfds":"markets/shares-cfds.html","skills-and-insights":"trading/how-to-start.html","spreads-margin":"trading/trading-conditions.html","standard-account":"accounts/standard.html","technical-analysis":"trading/how-to-start.html","tools":"tools/economic-calendar.html","tradingview":"platforms/webtrader.html","vps-partners":"platforms/webtrader.html","webtrader":"platforms/webtrader.html","partnership":"partnership/index.html"};
+ async function sourceEntry(path){
+  try{
+   const r=await fetch('https://raw.githubusercontent.com/mahekp7021-commits/fxcentrum24-v2/main/'+path,{cache:'no-cache'});
+   if(!r.ok)return null;
+   const doc=new DOMParser().parseFromString(await r.text(),'text/html');
+   let root=doc.querySelector('main');
+   if(!root){root=doc.body;root?.querySelectorAll('header,footer,nav,script,style').forEach(n=>n.remove());}
+   if(!root)return null;
+   const clean=s=>(s||'').replace(/FXCentrum24|FX CENTRUM24|GO COIIN|FOREX/gi,'FXDemo').replace(/\s+/g,' ').trim();
+   const h1=root.querySelector('h1'),title=clean(h1?.textContent||doc.title);
+   let intro=''; if(h1){let n=h1.nextElementSibling;while(n&&!intro){if(n.matches('p'))intro=clean(n.textContent);else if(n.querySelector?.('p'))intro=clean(n.querySelector('p').textContent);n=n.nextElementSibling;}}
+   const pairs=[]; [...root.querySelectorAll('h2,h3')].forEach(h=>{const name=clean(h.textContent);if(!name||name.length<3||/^on this page$/i.test(name)||pairs.includes(name))return;let d='',n=h.nextElementSibling,k=0;while(n&&k++<10&&!n.matches('h2,h3')){if(n.matches('p,li')){const t=clean(n.textContent);if(t.length>18)d+=(d?' ':'')+t;}n=n.nextElementSibling;}if(d){pairs.push(name,d.slice(0,500));}});
+   if(pairs.length<4){const ps=[...root.querySelectorAll('p')].map(p=>clean(p.textContent)).filter(p=>p.length>55&&p!==intro);while(pairs.length<6&&ps.length){pairs.push('More information',ps.shift());}}
+   return [title,intro||'Review the information and applicable terms before taking action.',pairs.slice(0,8)];
+  }catch(e){return null;}
+ }
+ if(sourcePaths[slug]&&!['how-open-account','apply','withdrawal','account-comparison','our-pricing','deposit','deposits-and-withdrawals'].includes(slug)){entry=await sourceEntry(sourcePaths[slug])||entry;}
+
  if(entry){
   const main=document.querySelector('main');
   if(main){
