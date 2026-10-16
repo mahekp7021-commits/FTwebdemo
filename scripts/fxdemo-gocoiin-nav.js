@@ -113,7 +113,8 @@ document.addEventListener('DOMContentLoaded',async function(){
  }
  if(sourcePaths[slug]&&!['how-open-account','apply','withdrawal','account-comparison','standard-account','premium-account','professional-account'].includes(slug)){entry=await sourceEntry(sourcePaths[slug])||entry;}
 
- if(entry){
+ // The Forex page has its own custom layout; do not let the legacy site-wide content refresher replace it.
+ if(entry && slug !== 'forex'){
   const main=document.querySelector('main');
   if(main){
    const title=entry[0],intro=entry[1],sections=entry[2];
