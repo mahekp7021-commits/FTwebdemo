@@ -7,10 +7,11 @@ Read **[FOREX_MASTER_CONTENT.md](./FOREX_MASTER_CONTENT.md)** before building or
 
 ## Project rule: same business content, customizable UI
 - Keep the forex concept, content coverage, information architecture, page purposes, forms, user journeys, and required functionality consistent across future designs.
-- Customize only the design layer for each new visual direction: colors, typography, spacing, layout, components, imagery, animation and responsive presentation.
+- Customize only the design layer for each new visual direction: colors, typography, spacing, layout, components, animation and responsive presentation. Use images/PNGs/video only in the homepage hero; inner pages must be premium text/data-focused layouts without decorative imagery.
 - Do not drop pages, rewrite business concepts from scratch, or replace page-specific content with generic filler during a redesign.
 - Preserve working navigation and routes, including **Payment > Deposits** and **Payment > Withdrawals**.
-- In the default reference design, retain the homepage hero, phone mockup, four TradingView market cards and bottom ticker unless the current instruction explicitly changes them.
+- In the default reference design, retain homepage hero media, phone mockup, the existing market cards/chart and bottom ticker unless the current instruction explicitly changes them. Do not use decorative images or PNGs on inner/menu pages.
+- Reuse the chart, indicator, market-strip, symbol-list and economic-calendar code/scripts from the supplied `fxcentrum24-v2-main` ZIP. Preserve existing Finlogix/TradingView integrations according to their current role; do not replace their scripts just for styling.
 - Treat fees, account specifications, reward figures, regulatory claims, contact details and legal text as unverified until approved by the operator. Never present mock prices as live data.
 
 ## Repository structure
