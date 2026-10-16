@@ -1,6 +1,6 @@
 # Forex Website Master Content & UI Contract
 
-**Purpose:** This repository is the canonical content and information-architecture source for every future Adinova Labs forex-broker website design. The business concept, page purpose, educational content, forms, trading tools, account concepts, and navigation remain consistent. Only the visual design, layout, typography, colors, spacing, imagery, responsive treatment, and component styling may change per design brief.
+**Purpose:** This repository is the canonical content and information-architecture source for every future Adinova Labs forex-broker website design. The business concept, page purpose, educational content, forms, trading tools, account concepts, and navigation remain consistent. Only the visual design, layout, typography, colors, spacing, and component styling may change per design brief. Inner menu pages are text-and-data focused: no decorative photos, PNGs, banners, or stock imagery. Images/video are reserved for the homepage hero only.
 
 **Source of truth:** Consolidated from the FXCentrum24/GO COIIN reference website and the FTwebdemo page library. Treat source/reference copy as editable draft content, not verified legal, regulatory, pricing, or execution claims. Never invent regulatory licences, company addresses, contact details, execution quality, spreads, leverage, fees, deposit methods, or guarantees. Keep placeholders where the business has not supplied approved values.
 
@@ -10,11 +10,11 @@
 2. A redesign is a **UI reskin**, not a content reset. Reuse the existing page catalogue, forms, tables, account information, market categories, platform descriptions, educational content, risk notices, legal page structure, and user journeys.
 3. Keep all navigation destinations working. Every menu item and submenu must open its correct page on desktop and mobile; mobile menus must open on tap, not require a long press.
 4. Keep **Payment** separate, with **Deposits** and **Withdrawals** as its sub-items. Do not bury payment under unrelated menus.
-5. Default reference/demo experience: preserve the Forex Master Demo/FTwebdemo identity, homepage hero, phone mockup, four TradingView market cards, and bottom ticker unless the user explicitly requests a different design. On GO COIIN adaptations, apply GO COIIN branding/content while preserving these components when instructed.
+5. **Homepage-only visual media:** use images, PNGs, and video only in the homepage hero. All inner/menu pages must use premium typography, structured text, tables, data, forms, subtle CSS details, and theme-specific components—no decorative images/PNGs. Preserve the homepage hero media, phone mockup, four market cards, chart area, and bottom ticker unless explicitly changed by the user.
 6. Maintain the agreed eight-main-menu approach where used: Markets, Trading, Platforms, Accounts, Tools, Company, Partnership, Payment. Put Resources and Legal under Company; keep Login and Open Account as distinct header actions. If a design brief explicitly specifies a different header, change styling and grouping without dropping page destinations.
 7. All pages must be page-specific. Do not reuse one generic page body for every route. Preserve each page's own heading, description, sections, tables, forms, FAQs/call-to-actions, and related links.
 8. Keep responsive desktop, tablet, and mobile behaviour. Maintain readable contrast, visible text, keyboard accessibility, and touch-friendly controls.
-9. Market widgets may display third-party live data only when configured. Label demo/static/sample prices clearly; never present hard-coded values as live.
+9. Reuse the actual chart, indicator, market-widget, and economic-calendar embed code/scripts present in the supplied `fxcentrum24-v2-main` ZIP wherever relevant. Inspect and preserve each integration's intended role; do not replace Finlogix/TradingView integrations or rewrite their scripts merely for design preference. Styling may be adapted around them. Market widgets may display third-party live data only when configured; label demo/static/sample prices clearly and never present hard-coded values as live.
 10. Legal, risk, fee, account, and partnership copy must be reviewed and approved by the operator before production. Do not imply a licence or regulated status unless verified.
 
 ## Canonical navigation and page catalogue
@@ -97,8 +97,9 @@ Each page should retain its own structured sections and clear navigation. These 
 - Header with logo, main navigation, working dropdowns/submenus, Login and Open Account actions.
 - Mobile hamburger/drawer with tap-to-open nested menus, clear close action, focus management and no hover-only interaction.
 - Hero section with heading, supporting copy and primary/secondary CTAs.
-- Market cards: default four TradingView cards in the reference/demo design.
-- Market ticker strip at the bottom of the main market area.
+- Homepage hero: the only location for imagery/PNG/video, including the established hero visual/media.
+- Market cards and charts: reuse the existing chart/widget integrations and scripts from the reference ZIP; retain the four market cards and bottom ticker on the homepage where present.
+- Inner pages: no decorative images or PNGs. Use premium theme-specific layout, typography, content hierarchy, tables, forms, data panels, CSS borders/backgrounds, and restrained motion instead.
 - Account tier cards and comparison tables.
 - Platform cards for MT4, MT5 and WebTrader.
 - Form components with labels, input validation, inline errors, loading/submitted states and accessible feedback.
@@ -120,7 +121,7 @@ The reference package includes these main content groups/routes; preserve their 
 - `legal/terms-and-conditions`, `legal/privacy-policy`, `legal/risk-disclosure`, `legal/aml-policy`, `legal/client-agreement`
 - Additional educational/market pages: CFDs, financing costs, calculating margin, profit/loss calculation, trading hours, holiday trading hours, corporate actions, depth of market, deposits and withdrawals, and FXTrade app.
 - Shared sections: accounts, market categories, platforms and market overview.
-- Widget references: Finlogix examples exist in the source package; use the agreed TradingView market/chart widgets for the FTwebdemo design when applicable. Do not keep Finlogix merely because a legacy source file exists.
+- Existing widget/script source in `fxcentrum24-v2-main` ZIP includes `script.js`, `site-fixes.js`, `sections/market-overview.html`, `tools/economic-calendar.html`, and `widgets/finlogix-bigchart.html`, `widgets/finlogix-crypto-chart-list.html`, `widgets/finlogix-earning-calendar.html`, `widgets/finlogix-strip.html`, and `widgets/finlogix-symbol-list.html`. Preserve and reuse these chart/indicator/market scripts according to their intended purpose. Keep existing TradingView integrations where present. Do not remove or swap an integration unless the user explicitly directs it.
 
 ## Content migration and redesign checklist
 
@@ -130,7 +131,9 @@ Before declaring any future forex design complete:
 - [ ] Confirm every desktop dropdown and mobile submenu works on tap.
 - [ ] Confirm Payment > Deposits and Payment > Withdrawals work independently.
 - [ ] Confirm all internal links point to the redesigned site's routes, not the old source domain.
-- [ ] Confirm the hero, phone mockup, four TradingView cards and bottom ticker remain when required by the current design brief.
+- [ ] Confirm images/video/PNGs are used only in the homepage hero; inner pages are text/data-focused with no decorative imagery.
+- [ ] Reuse and test existing chart, indicator, market-strip, symbol-list, and economic-calendar scripts from the supplied ZIP; do not replace them with invented/mock functionality.
+- [ ] Confirm the hero, phone mockup, market cards/chart and bottom ticker remain when required by the current design brief.
 - [ ] Confirm each page has unique, relevant content rather than duplicated generic copy.
 - [ ] Confirm account/partner figures and legal claims are verified or marked as placeholders.
 - [ ] Confirm no dummy market values are presented as live.
